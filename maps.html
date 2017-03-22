@@ -1,0 +1,166 @@
+<div id="content-wrapper"><div class="row"><div class="col-lg-12"><div class="main-box clearfix" style="min-height: 1200px;">
+<header class="main-box-header clearfix"><h2>World map</h2></header>
+<div class="main-box-body clearfix">
+
+
+<script src="/public/map/w_countrydata.js"></script>
+<script src="/public/map/w_regiondata.js"></script>
+<script src="/public/map/w_api.js"></script>
+<script src="/public/map/w_map.js"></script>
+
+<div id="map" style="width: 100%;height: 600px;"></div>
+<div id="regionInfo" style="display: none;cursor: default;position: absolute;width: 300px;height: 205px;top: 58px;right: 35px;background: #FFF none repeat scroll 0% 0%;border-radius: 4px;box-shadow: 0px 0px 8px rgb(119, 119, 119);z-index: 10;"></div>
+<script>
+var regionPolygon = [];
+var regionNeighbors = [];
+var markers = [];
+
+function initMap() {
+    var customMapType = new google.maps.StyledMapType([
+      { stylers: [{visibility: 'off'}]},
+      { featureType: 'geometry.fill', stylers: [{visibility: 'on'},{color: '#f2f2f2'}]},
+      { featureType: 'water', stylers: [{visibility: 'on'},{color: '#d8f2ff'}]}
+    ], { name: 'Custom Style' });
+
+    var customMapTypeId = 'custom_style';
+    var wspolrzedne = new google.maps.LatLng(45.453117295560354,20.173046874999955);
+    var opcjeMapy = {
+        center: wspolrzedne,
+        disableDefaultUI: true,
+        maxZoom: 7,
+        minZoom: 2,
+        zoom: 2,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        zoomControl: false,
+        panControl: false,
+        mapTypeControl: false,
+        streetViewControl: false,
+        overviewMapControl: false,
+        mapTypeControlOptions: {
+            mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+        }
+    };
+    map = new google.maps.Map(document.getElementById("map"), opcjeMapy);
+    map.mapTypes.set(customMapTypeId, customMapType);
+    map.setMapTypeId(customMapTypeId);
+
+    $.each(regionCoordinates, function(regionID, regionCoor) {
+        $.each(regionCoor, function(index, coorArray) {
+            var coor = [];
+            $.each(coorArray, function(indexE, value) {
+                data = value.split(",");
+                var latlng = new google.maps.LatLng(data[1], data[0]);
+                coor.push(latlng);
+            });
+
+            var regionColor = "#d1d1d1";
+            if (typeof regionData[regionID] != 'undefined' && typeof apiData[regionID] != 'undefined') {
+                if (typeof countryData[apiData[regionID].owner_current_id] != 'undefined') {
+                    regionColor = countryData[apiData[regionID].owner_current_id].color;
+                }
+            }
+            var gmapsPolygon = new google.maps.Polygon({
+                paths: coor,
+                strokeColor: regionColor,
+                strokeOpacity: 0.8,
+                strokeWeight: 1,
+                fillColor: regionColor,
+                fillOpacity: 0.6
+            });
+
+            gmapsPolygon.setMap(map);
+            
+            if (regionPolygon[regionID] == null) { regionPolygon[regionID] = new Array(); }
+            regionPolygon[regionID].push(gmapsPolygon);                                        
+
+            google.maps.event.addListener(gmapsPolygon, 'mouseover', function(event) {
+                this.setOptions({ fillOpacity: 0.9, zIndex: 10});
+                mouseoverNeighbors(regionID);
+            });
+						
+            google.maps.event.addListener(gmapsPolygon, 'mouseout', function(event) {
+                this.setOptions({ fillOpacity: 0.6, zIndex: 10});
+                mouseoutNeighbors();
+            });
+            
+            addMarker(regionID, coor);
+        });
+    });
+    
+function mouseoverNeighbors(regionX) {
+    if(regionX>0){
+    jQuery("#regionInfo").empty();
+    jQuery("#regionInfo").css("display", "block");
+    var bf = "";
+    if(apiData[regionX].battle == 1){
+        bf = "background-color: #4ab6c3 !important;";
+    }
+    jQuery("#regionInfo").html("<div class=\"main-box clearfix profile-box-menu\"><div class=\"main-box-body clearfix\"><div class=\"profile-box-header green-bg clearfix\" style=\"padding: 10px;"+bf+"\"><img class=\"profile-img img-responsive\" src=\"/public/game/flags/shiny/64/"+ countryData[apiData[regionX].owner_current_id].flag +".png\" style=\"width: 64px;height: 64px;\" alt=\"\"><h2 style=\"padding: 0px;display: inline;\">"+regionData[regionX].name+"</h2><div class=\"job-position\">"+countryData[apiData[regionX].owner_current_id].name+"</div></div><div class=\"profile-box-content clearfix\"><ul class=\"menu-items\"><li style=\"overflow: hidden;\"><a href=\"#\" class=\"clearfix\"><img src=\"/public/game/flags/shiny/24/"+ countryData[apiData[regionX].owner_current_id].flag +".png\" style=\"width: 24px; height: 24px;margin-top: -5px;margin-left: 0px;\" alt=\"\"> Owned by: "+countryData[apiData[regionX].owner_current_id].name+"</a></li><li style=\"overflow: hidden;\"><a href=\"#\" class=\"clearfix\"><img src=\"/public/game/flags/shiny/24/"+ countryData[apiData[regionX].owner_original_id].flag +".png\" style=\"width: 24px; height: 24px;margin-top: -5px;margin-left: 0px;\" alt=\"\"> Rightful owner: "+countryData[apiData[regionX].owner_original_id].name+"</a></li><li><a href=\"#\" class=\"clearfix\"><img src=\"/public/game/resource/"+ apiData[regionX].resource +".png\" style=\"width: 24px; height: 24px;margin-top: -5px;margin-left: 0px;\" alt=\"\"> Resource: "+ apiData[regionX].resource +"</a></li></ul></div></div></div>");
+    }
+    regionNeighbors = regionData[regionX].neighbours;
+    $.each(regionData[regionX].neighbours, function(ndex, value) {
+        if(typeof regionPolygon[value] != 'undefined') {
+            $.each(regionPolygon[value], function(index_, gmapPolygon) {
+                gmapPolygon.setOptions({ fillOpacity: 0.3, zIndex: 10});
+            });
+        }
+    });
+}
+function mouseoutNeighbors() {
+    if(regionNeighbors.length>0) {
+        $.each(regionNeighbors, function(ndex, value) {
+            if(typeof regionPolygon[value] != 'undefined') {
+                $.each(regionPolygon[value], function(index_, gmapPolygon) {
+                    gmapPolygon.setOptions({ fillOpacity: 0.6, zIndex: 10});
+                });
+            }
+        });
+        regionNeighbors = [];
+    }
+}
+
+var minValue = 5;
+var maxValue = 10;
+google.maps.event.addListener(map, 'zoom_changed', function() {
+    var zoom = map.getZoom();
+    if( zoom > minValue && zoom < maxValue) {
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(map);
+        }
+    } else {
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(null);
+        }
+    }
+});
+
+function addMarker(region, location) {
+    var bounds = new google.maps.LatLngBounds();
+    var i;
+    for (i = 0; i < location.length; i++) {
+        bounds.extend(location[i]);
+    }
+    var image = {
+        url: '/public/game/resource/'+ apiData[region].resource +'.png',
+        scaledSize : new google.maps.Size(25, 25)
+        //origin: new google.maps.Point(3, 3),
+        //anchor: new google.maps.Point(0, 0)
+    };
+    var infoWindow = new google.maps.InfoWindow();
+    var marker = new google.maps.Marker({
+        position: bounds.getCenter(),
+        map: null,
+        icon: image
+    });
+    markers.push(marker);
+    google.maps.event.addListener(marker, "click", function () {
+        infoWindow.setContent("<h2><img src=\"/public/game/flags/shiny/24/"+ countryData[apiData[region].owner_current_id].flag +".png\" style=\"width: 24px; height: 24px;margin-top: -5px;margin-left: 0px;\" alt=\"\"> <a href=\"https://www.erevollution.com/en/country/region/"+apiData[region].owner_current_id+"/"+countryData[apiData[region].owner_current_id].flag+"/"+region+"/"+regionData[region].name+"\">"+regionData[region].name+"</a></h2><p style=\"margin-top: 10px;\"><img src=\"/public/game/resource/"+ apiData[region].resource +".png\" style=\"width: 24px; height: 24px;margin-top: -5px;margin-left: 0px;\" alt=\"\"> Resource: "+ apiData[region].resource +"</p>");
+        infoWindow.open(map, marker);
+    });
+}
+
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+
+</div>

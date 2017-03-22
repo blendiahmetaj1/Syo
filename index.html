@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>E-World</title>
+    <meta charset="utf-8">
+	<meta name="author" content="Tomaž Čuk" />
+    <meta name="keywords" content="e-world" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+</style>
+<body>
+<div style="position:absolute;z-index:0;left:0;top:0;width:100%;height:100%">
+  <img src="ozadje.png" style="width:100%;height:100%" alt="[]" />
+</div>
+<nav id="navbar" class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div  class="navbar-header">
+      <a class="navbar-brand" href="#">E-World</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Battles</a></li>
+      <li><a href="#">Store</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">User
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="row">
+  <div class="col-md-6">
+	<div style="padding-left:10%; padding-top: 5%; padding-right: 1%">
+	<div class="well" style="background-color: rgba(255, 255, 255, 0.8)">
+	<h3 align="center" >Welcome to E-World!</h3>
+	<h4 style="padding-left:15px">A new universe is unfolding. Help your country!</h2>
+	<p style="padding-left:10px">Create your account and you will have the ability to help your country develop as military, economy or political super-power.Multiplayer strategy game that allows users to run the economy, conquer other nations, become a politician and rule a country, or liberate your country and start a resistance war. eRevollution the online strategy game.</p>
+	<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sign up</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Sign up</h4>
+      </div>
+      <div class="modal-body">
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+  </div>
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="username">Username:</label>
+    <div class="col-sm-10">
+      <input type="username" class="form-control" id="username" placeholder="Enter username">
+    </div>
+  </div>
+ <div class="form-group">
+  <label class="control-label col-sm-2" for="sel1">Select your country:</label>
+    <div class="col-sm-10">
+  <select class="form-control" id="sel1">
+<option value="75">Afghanistan</option><option value="1">Albania</option><option value="2">Argentina</option><option value="3">Armenia</option><option value="4">Australia</option><option value="5">Austria</option><option value="6">Belarus</option><option value="7">Belgium</option><option value="8">Bolivia</option><option value="9">Bosnia and Herzegovina</option><option value="10">Brazil</option><option value="11">Bulgaria</option><option value="12">Canada</option><option value="13">Chile</option><option value="14">China</option><option value="15">Colombia</option><option value="16">Croatia</option><option value="17">Cuba</option><option value="18">Cyprus</option><option value="19">Czech Republic</option><option value="20">Denmark</option><option value="21">Egypt</option><option value="22">Estonia</option><option value="23">Finland</option><option value="24">France</option><option value="25">Georgia</option><option value="26">Germany</option><option value="27">Greece</option><option value="28">Hungary</option><option value="29">India</option><option value="30">Indonesia</option><option value="31">Iran</option><option value="32">Ireland</option><option value="33">Israel</option><option value="34">Italy</option><option value="35">Japan</option><option value="36">Latvia</option><option value="37">Lithuania</option><option value="38">Malaysia</option><option value="39">Mexico</option><option value="40">Montenegro</option><option value="76">Morocco</option><option value="41">Netherlands</option><option value="42">New Zealand</option><option value="43">Nigeria</option><option value="44">North Korea</option><option value="45">Norway</option><option value="46">Pakistan</option><option value="47">Paraguay</option><option value="48">Peru</option><option value="49">Philippines</option><option value="50">Poland</option><option value="51">Portugal</option><option value="52">Republic of China (Taiwan)</option><option value="53">Republic of Macedonia (FYROM)</option><option value="54">Republic of Moldova</option><option value="55">Romania</option><option value="56">Russia</option><option value="57">Saudi Arabia</option><option value="58">Serbia</option><option value="59">Singapore</option><option value="60">Slovakia</option><option value="61">Slovenia</option><option value="62">South Africa</option><option value="63">South Korea</option><option value="64">Spain</option><option value="65">Sweden</option><option value="66">Switzerland</option><option value="67">Thailand</option><option value="68">Turkey</option><option value="69">Ukraine</option><option value="70">United Arab Emirates</option><option value="71">United Kingdom</option><option value="73">United States of America</option><option value="72">Uruguay</option><option value="74">Venezuela</option>
+  </select>
+    </div>
+</div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="password">Password:</label>
+    <div class="col-sm-10"> 
+      <input type="password" class="form-control" id="password" placeholder="Enter password">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="password_confirm">Confirm Password:</label>
+    <div class="col-sm-10"> 
+      <input type="password" class="form-control" id="password_confirm" placeholder="Confirm password">
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+  </div>
+</form>
+      </div>
+function myFunction() {
+    var pass1 = document.getElementById("password").value;
+    var pass2 = document.getElementById("password_confirm").value;
+    var ok = true;
+    if (password != password_confirm) {
+        //alert("Passwords Do not match");
+        document.getElementById("password").style.borderColor = "#E34234";
+        document.getElementById("password_confirm").style.borderColor = "#E34234";
+        ok = false;
+    }
+    else {
+        alert("Passwords Match!!!");
+    }
+    return ok;
+}
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>		
+			</div>
+		</div>
+	</div>
+<div class="row">
+  <div class="col-md-6">
+	<div style="padding-right:10%; padding-top: 5%">
+  <div class="well" style="background-color: rgba(255, 255, 255, 0.8)">
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

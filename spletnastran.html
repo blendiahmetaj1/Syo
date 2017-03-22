@@ -1,0 +1,786 @@
+<html lang="en-US" xml:lang="en-US" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>eRevollution</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="title" content="eRevollution - Online Social Strategy Game" />
+<meta name="description" content="Multiplayer strategy game that allows users to run the economy, conquer other nations, become a politician and rule a country,or liberate your country and start a resistance war." />
+<meta name="keywords" content="strategy games,multiplayer games,online strategy games,free online multiplayer strategy game,gold,money,coin,free to play,game,multiplayer game,social game,mmog, eRevollution" />
+<meta name="generator" content="Powered by eRevollution."/>
+<meta name="robots" content="index, follow" />
+<meta name="language" content="en" />
+<meta name="author" content="eRevollution" />
+<meta name="publisher" content="eRevollution" />
+<meta name="copyright" content="eRevollution" />
+<meta name="page-type" content="browser game, browsergame" />
+<meta name="page-topic" content="browser game, strategy game, online game" />
+<meta name="audience" content="all" />
+<meta name="expires" content="never" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta itemprop="name" content="eRevollution | Online Social Strategy Game" />
+<meta itemprop="description" content="Multiplayer strategy game that allows users to run the economy, conquer other nations, become a politician and rule a country,or liberate your country and start a resistance war." />
+<meta itemprop="image" content="/public/img/logo.png" />
+<meta property="og:title" content="eRevollution" />
+<meta property="og:site_name" content="eRevollution" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.erevollution.com" />
+<meta property="og:image" content="/public/images/logo.png" />
+<meta property="og:description" content="Multiplayer strategy game that allows users to run the economy, conquer other nations, become a politician and rule a country,or liberate your country and start a resistance war." />
+<meta property="og:determiner" content="the" />
+<meta property="og:locale" content="en_GB" />
+<meta property="fb:app_id" content="133565423687770" />
+<meta property="twitter:site" content="@eRevgame" />
+
+<script type="text/javascript" src="/public/js/jquery-1.11.2.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/public/css/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/libs/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/compiled/theme_styles.min.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/app.css" />
+
+<link type="image/x-icon" href="/public/img/favicon.png" rel="shortcut icon" />
+
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+
+<!--[if lt IE 9]>
+    <script src="/public/js/html5shiv.js"></script>
+    <script src="/public/js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body class="theme-whbl pace-done boxed-layout">
+<div id="theme-wrapper">
+    <header class="navbar" id="header-navbar">
+        <div class="container">
+            <a href="https://www.erevollution.com/en/index" id="logo" class="navbar-brand vs180">
+                <img src="/public/img/logo.png" alt="" class="normal-logo logo-white vs181"/>
+                <img src="/public/img/logo.png" alt="" class="normal-logo logo-black"/>
+                <img src="/public/img/logo.png" alt="" class="small-logo hidden-xs hidden-sm hidden"/>
+            </a>
+            
+            <div class="clearfix">
+                <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="fa fa-bars"></span>
+                </button>
+		
+                                <div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">
+                    <ul class="nav navbar-nav pull-left">
+                        <li><a class="btn" id="make-small-nav"><i class="fa fa-bars"></i></a></li>
+                        <li>
+                            <a class="btn" href="https://www.erevollution.com/en/messages/inbox/1">
+                                <i class="fa fa-envelope-o"></i>
+                                                            </a>
+                        </li>
+                        <li>
+                            <a class="btn" href="https://www.erevollution.com/en/messages/alerts/1">
+                                <i class="fa fa-bell"></i>
+                                                            </a>
+                        </li>
+                        <li><a class="btn" href="#">Day 437</a></li>
+                        <li><a class="btn" href="#"><i class="fa fa-calendar-o"></i> Mar 22</a></li>
+                        <li>
+                            <a class="btn" href="#"><i class="fa fa-clock-o"></i> <span id="game-time">05:35</span></a>
+                            <script type="text/javascript">
+                            var serverdate = new Date('March 22, 2017 05:35:18');
+                            function padlength(what){
+                                var output = (what.toString().length==1)? "0"+what : what;
+                                return output;
+                            }
+                            function displaytime(){
+                                serverdate.setSeconds(serverdate.getSeconds()+1);
+                                //var timestring=""+padlength(serverdate.getHours())+":"+padlength(serverdate.getMinutes())+":"+padlength(serverdate.getSeconds())+"";
+                                var timestring=""+padlength(serverdate.getHours())+":"+padlength(serverdate.getMinutes())+"";
+                                document.getElementById("game-time").innerHTML=" "+timestring;
+                            }
+                            window.onload=function(){
+                                setInterval("displaytime()", 1000);
+                            }
+                            </script>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <div id="fb-root"></div>
+                            <script>(function(d, s, id) {
+                              var js, fjs = d.getElementsByTagName(s)[0];
+                              if (d.getElementById(id)) return;
+                              js = d.createElement(s); js.id = id;
+                              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=630196243780270";
+                              fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
+                            <div class="fb-like" data-href="https://www.facebook.com/eRevollution/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+				
+                <div class="nav-no-collapse pull-right" id="header-nav">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="mobile-search">
+                            <a class="btn"><i class="fa fa-search"></i></a>			
+                            <div class="drowdown-search">
+                                <form role="search" action="https://www.erevollution.com/en/search" enctype="multipart/form-data" method="post">
+                                    <div class="form-group">
+                                        <input name="searchword" type="text" class="form-control" placeholder="Search for someone">
+                                        <i class="fa fa-search nav-search-icon"></i>
+                                    </div>
+                                </form>
+                            </div>			
+                        </li>
+                        <li class="dropdown profile-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="/public/upload/citizen/74981.jpg" alt="Bluetercoy" />
+                                <span class="hidden-xs">Bluetercoy</span> <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+				<li><a href="https://www.erevollution.com/en/profile/74981"><i class="fa fa-user"></i>Profile</a></li>
+				<li><a href="https://www.erevollution.com/en/edit-profile"><i class="fa fa-cog"></i>Settings</a></li>
+                                <li><a href="https://www.erevollution.com/en/messages/inbox/1"><i class="fa fa-envelope-o"></i>Messages                                                                        </a>
+                                </li>
+				<li><a href="https://www.erevollution.com/en/messages/alerts/1"><i class="fa fa-bell-o"></i>Alerts                                                                        </a>
+                                </li>
+                                                                <li><a href="https://www.erevollution.com/en/logout"><i class="fa fa-power-off"></i>Logout</a></li>
+                            </ul>
+                        </li>
+			<li class="hidden-xxs"><a class="btn" href="https://www.erevollution.com/en/logout"><i class="fa fa-power-off"></i></a></li>
+                    </ul>
+                </div>
+                            </div>
+        </div>
+    </header>
+    
+    <div id="page-wrapper" class="container">
+        <div class="row">
+            <div id="nav-col">
+                                <section id="col-left" class="col-left-nano">
+                    <div id="col-left-inner" class="col-left-nano-content">
+                        <div id="user-left-box" class="clearfix hidden-sm hidden-xs dropdown profile2-dropdown">
+                            <a href="https://www.erevollution.com/en/profile/74981"><img src="/public/upload/citizen/74981.jpg" alt="Bluetercoy" /></a>
+                            <div class="user-box">
+                                <span class="name">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Bluetercoy 
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="https://www.erevollution.com/en/profile/74981"><i class="fa fa-user"></i>Profile</a></li>
+                                        <li><a href="https://www.erevollution.com/en/edit-profile"><i class="fa fa-cog"></i>Settings</a></li>
+                                        <li><a href="https://www.erevollution.com/en/messages/inbox/1"><i class="fa fa-envelope-o"></i>Messages</a></li>
+                                                                                <li><a href="https://www.erevollution.com/en/logout"><i class="fa fa-power-off"></i>Logout</a></li>
+                                    </ul>
+				</span>
+				<span class="status">
+                                    <i class="fa fa-circle"></i> Online				</span>
+                            </div>
+			</div>
+			<div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">	
+                            <ul class="nav nav-pills nav-stacked">
+				<li class="nav-header nav-header-first hidden-sm ">
+                                    <div class="vs104 vs194">
+                                        <a class="vs107" href="https://www.erevollution.com/en/country/society/68/Turkey"><img class="vs106" src="/public/game/flags/flat/32/Turkey.png" width="22" height="16" alt="Turkey"> Turkey</a>
+                                    </div>
+                                    <div class="vs104">
+                                        <img src="/public/game/icons/gold-icon-s.png" width="24" height="24" alt="Gold"> Gold <span class="vs105">5.55</span>
+                                    </div>
+                                    <div class="vs104">
+                                                                                <img src="/public/game/flags/flat/32/Turkey.png" width="24" height="24" alt="TRY"> TRY <span class="vs105">737.87</span>
+                                    </div>
+                                    
+                                    <div class="vs100 progress progress-striped active" data-toggle="tooltip" data-html="true" data-placement="top" title="Working, training and fighting decreases your Energy<br> Food and Energy Drinks restore your energy">
+                                        <div id="energyBarP" class="progress-bar progress-bar-success" style="width: 45.45%"><div id="energyBarT" class="vs101">250 / 550</div></div>
+                                    </div>
+                                    <div class="vs149"><a id="energyButton" class="btn btn-success btn-sm col-xs-12 tooltipsEnergy" href="javascript:;"><img src="/public/game/icons/food.png" width="26" height="16" alt=""> Recover Energy<main><div class="vs147">This action recovers as much Energy as possible by consuming Food from your Storage.<br><br> You can recover <strong id="energyButtonT">0</strong> more Energy<span id="energyFullT"></span></div></main></a></div>
+                                    <div id="energyTime" class="vs148" style="display:none;" data-toggle="tooltip" data-html="true" data-placement="top" title="Recover 10 Energy every 05:48 minutes"><span><img src="/public/game/icons/recover_energy.gif" width="18" height="18" alt="" /> Recover <strong id="energyTimeR">0</strong> more in <span id="energyTimeT">0</span></span></div>
+                                    <input id="loadEnergy" name="food" value="1" type="hidden">
+                                    <script type="text/javascript">
+                                    jQuery(document).ready(function(){
+                                    var energy_max = 550;
+                                    var energy_time = 348;
+                                    var energy_restore = 10;
+
+                                    var energy_time_now = 1490186118;
+                                    var energy_time_cd = 1490185700;
+
+                                    var updateEnergyCD = setInterval(function(){updateEnergy()}, 1000);
+                                    function updateEnergy() {
+                                        energy_time_now++;
+                                        var food_time_total = Math.floor((energy_time_now-energy_time_cd)/energy_time);
+                                        food_time_total = Math.max(0,food_time_total);
+                                        var food_time_restore = food_time_total * energy_restore;
+                                        if(food_time_restore>=energy_max){
+                                            food_time_restore = energy_max;
+                                        }
+                                        jQuery("#energyButtonT").empty();
+                                        jQuery("#energyButtonT").append(""+food_time_restore+"");
+                                        jQuery("#energyTimeR").empty();
+                                        jQuery("#energyTimeR").append(""+energy_restore+"");
+                                        var e_time = energy_time - ((energy_time_now-energy_time_cd)%energy_time);
+                                        var e_minutes = Math.floor(e_time / 60);
+                                        if(e_minutes<10){
+                                            e_minutes = "0"+e_minutes;
+                                        }    
+                                        var e_seconds = e_time - e_minutes * 60;
+                                        if(e_seconds<10){
+                                            e_seconds = "0"+e_seconds;
+                                        }
+                                        jQuery("#energyTimeT").empty();
+                                        jQuery("#energyTimeT").append(""+e_minutes+":"+e_seconds+"");
+                                        var energy_full_time = Math.floor((energy_max/energy_restore)*energy_time - (energy_time_now-energy_time_cd));
+                                        jQuery("#energyFullT").empty();
+                                        jQuery("#energyFullT").append("Time until full energy recovery in <b>"+formatTime(energy_full_time)+"</b>");
+                                        if(food_time_restore>=energy_max){
+                                            clearInterval(updateEnergyCD);
+                                            jQuery("#energyTime").css("display", "none");
+                                            jQuery("#energyFullT").css("display", "none");
+                                        }else{
+                                            jQuery("#energyTime").css("display", "block");
+                                            jQuery("#energyFullT").css("display", "block");
+                                        }
+                                    }
+                                    function formatTime(duration) {
+                                        var hour = 0;
+                                        var min = 0;
+                                        var sec = 0;
+                                        if (duration){
+                                            if (duration >= 60){
+                                                min = Math.floor(duration / 60);
+                                                sec = duration % 60;
+                                            } else {
+                                                sec = duration;
+                                            }
+                                            if (min >= 60){
+                                                hour = Math.floor(min / 60);
+                                                min = min - hour * 60;
+                                            }
+                                            if ( hour < 10 ){ hour = '0'+hour; }
+                                            if ( min < 10 ){ min = '0'+min; }
+                                            if ( sec < 10 ){ sec = '0'+sec; }
+                                        }
+                                        return hour +":"+ min +":"+ sec;
+                                    }
+                                    jQuery("#energyButton").click(function() {
+                                        jQuery.ajax({
+                                            url : "https://www.erevollution.com/en/energy/1",
+                                            type: "POST",
+                                            data: jQuery("#loadEnergy").serialize(),
+                                            success: function(data){
+                                                if(data){
+                                                    jQuery.each(jQuery.parseJSON(data), function(idx, obj) {
+                                                        if(obj.STATUS==1){
+                                                            //jQuery("#energyBarP").animate({"width": obj.PROGRESS +"%"}, 500);
+                                                            jQuery("#energyBarP").css("width", obj.PROGRESS+"%").attr("aria-valuenow", obj.PROGRESS);
+                                                            jQuery("#energyBarT").empty();
+                                                            jQuery("#energyBarT").append(""+obj.ENERGY+" / "+obj.MAX+"");
+                                                            energy_time_now = obj.TIME;
+                                                            energy_time_cd = obj.CD;
+                                                            clearInterval(updateEnergyCD);
+                                                            updateEnergyCD = setInterval(function(){updateEnergy()}, 1000);
+                                                        }
+                                                        if(obj.STATUS==2){
+                                                            jQuery("#energyButton").removeClass('btn-success');
+                                                            jQuery("#energyButton").addClass('btn-default');
+                                                        }
+                                                    });
+                                                }
+                                            }
+                                        });
+                                        return false;
+                                    });
+
+                                    });
+                                    </script>
+                                    <div class="vs100 progress progress-striped active">
+                                                                                <div class="progress-bar progress-bar-warning" style="width: 72.40%"><div class="vs101">1448 / 2000</div><div class="vs103">Lv. 24</div></div>
+                                    </div>
+				</li>
+				<li class="active"><a href="https://www.erevollution.com/en/index"><i class="fa fa-home"></i><span>Home</span></a></li>
+				<li>
+                                    <a href="#" class="dropdown-toggle"><i class="fa fa-flag-o"></i><span>My Buildings</span><i class="fa fa-angle-right drop-icon"></i></a>
+                                    <ul class="submenu">
+					<li><a href="https://www.erevollution.com/en/companies">Companies</a></li>
+					<li><a href="https://www.erevollution.com/en/training-grounds">Workout area</a></li>
+					<li><a href="https://www.erevollution.com/en/inventory">Storage</a></li>
+                                        <li><a href="https://www.erevollution.com/en/advanced-buildings">Improved buildings</a></li>
+                                        <li><a href="https://www.erevollution.com/en/strategic-buildings">Strategic buildings</a></li>
+                                    </ul>
+				</li>
+				<li>
+                                    <a href="https://www.erevollution.com/en/wars"><i class="fa fa-paper-plane"></i><span>Battles</span></a>
+				</li>
+				<li>
+                                    <a href="#" class="dropdown-toggle"><i class="fa fa-shopping-cart"></i><span>Business Center</span><i class="fa fa-angle-right drop-icon"></i></a>
+                                    <ul class="submenu">
+					<li><a href="https://www.erevollution.com/en/market">Trading center</a></li>
+					<li><a href="https://www.erevollution.com/en/job-market">Job market</a></li>
+					<li><a href="https://www.erevollution.com/en/monetary-market">Monetary trading</a></li>
+					<li><a href="https://www.erevollution.com/en/company-market">Company market</a></li>
+                                    </ul>
+				</li>
+				<li>
+                                    <a href="#" class="dropdown-toggle"><i class="fa fa-users"></i><span>Community</span><i class="fa fa-angle-right drop-icon"></i></a>
+                                    <ul class="submenu">
+					<li><a href="https://www.erevollution.com/en/country">My Country</a></li>
+					<li><a href="https://www.erevollution.com/en/military-unit">Military Unit</a></li>
+					<li><a href="https://www.erevollution.com/en/party">Party</a></li>
+					<li><a href="https://www.erevollution.com/en/newspaper">Journalism</a></li>
+                                        <li><a href="https://www.erevollution.com/en/alliance">Alliances</a></li>
+					<li><a href="https://www.erevollution.com/en/elections">Elections</a></li>
+					<li><a href="https://www.erevollution.com/en/rankings">Rankings</a></li>
+					<li><a href="https://www.erevollution.com/en/map">World map</a></li>
+                                    </ul>
+				</li>
+				<li><a href="https://www.erevollution.com/en/special-items"><i class="fa fa-gift"></i><span>Store</span><span class="label label-success pull-right" style="display: none;">New</span></a></li>
+				<li class="nav-header hidden-sm hidden-xs">
+                                    Missions				</li>
+                                <li>
+                                    <a class="vs167" href="javascript:;" data-toggle="modal" data-target="#exampleWeekly"><img src="/public/game/missions/weekly.png" width="45" height="45" alt=""></a>
+<div class="modal fade" id="exampleWeekly" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;">
+    <div class="modal-dialog" style="margin-top: 65px;">
+        <div class="modal-content vs218">
+            <div class="modal-header" style="border: none;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="vs168-1" aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title vs168-1" id="exampleModalLabel">[Mar] Passport Stamp</h4>
+            </div>
+            <div class="modal-body">
+                <div class="vs213">
+                    <div class="vs215"><span>Day</span><strong>22</strong></div><div class="vs214"><span class="vs216">1</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">2</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">3</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">4</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">5</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">6</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">7</span><img src="/public/game/items/booster.png" width="45" height="45" alt="" data-container="body" data-toggle="popover" data-placement="top" data-content="+3 Booster Q3"></div><div class="vs214"><span class="vs216">8</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">9</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">10</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">11</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">12</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">13</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">14</span><img src="/public/game/items/missile.png" width="45" height="45" alt="" data-container="body" data-toggle="popover" data-placement="top" data-content="+3 Missile Q3"></div><div class="vs214"><span class="vs216">15</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">16</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">17</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">18</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">19</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">20</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">21</span><img src="/public/game/items/life-kit.png" width="45" height="45" alt="" data-container="body" data-toggle="popover" data-placement="top" data-content="+3 Life Kit Q3"></div><div class="vs214"><span class="vs216">22</span><img src="/public/game/missions/leaf2.png" width="45" height="45" alt=""></div><div class="vs214"><span class="vs216">23</span></div><div class="vs214"><span class="vs216">24</span></div><div class="vs214"><span class="vs216">25</span></div><div class="vs214"><span class="vs216">26</span></div><div class="vs214"><span class="vs216">27</span></div><div class="vs214"><span class="vs216">28</span><img src="/public/game/missions/reward.png" width="45" height="45" alt=""></div>                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+    if(jQuery('[data-toggle="popover"]').length) {
+        jQuery('[data-toggle="popover"]').popover({ trigger: "hover" });
+    }
+});
+</script><a class="vs167" href="javascript:;" data-toggle="modal" data-target="#exampleChallenge"><img src="/public/game/missions/challenge.png" width="45" height="45" alt=""></a>
+<div class="modal fade" id="exampleChallenge" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;">
+    <div class="modal-dialog" style="margin-top: 65px;">
+        <div class="modal-content vs218">
+            <div class="modal-header" style="border: none;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="vs168-1" aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title vs168-1" id="exampleModalLabel">[21-31 Mar] XII Challenge</h4>
+            </div>
+            <div class="modal-body">
+                <div class="vs220">
+                    <div class="vs221"><a href="javascript:;" onclick="challengeShow(); return false;"><i class="fa fa-trophy vs219-1"></i></a></div><div id="challengeM" style="display:block;"><p class="vs219">Damage progress<br><span class="vs219-1">1 745 726</span> <sup>/ 3 229 000</sup></p><div id="vscont" data-pct="54"><svg id="vssvg" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle><circle id="vsbar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0" style="stroke-dashoffset: 260.12356px;"></circle></svg></div><div class="vs222"><span class="vs222-1">5%</span><img src="/public/game/icons/xp-s.png" width="45" height="45" alt="" data-container="body" data-toggle="popover" data-placement="top" data-content="+20 Experience"></div><div class="vs222"><span class="vs222-1">10%</span><img src="/public/game/items/food.png" width="45" height="45" alt="" data-container="body" data-toggle="popover" data-placement="top" data-content="+50 Food Q5"></div><div class="vs222"><span class="vs222-1">15%</span><img src="/public/game/items/weapons.png" width="45" height="45" alt="" data-container="body" data-toggle="popover" data-placement="top" data-content="+30 Weapons Q5"></div><div class="vs222"><span class="vs222-1">20%</span><img src="/public/game/icons/vote.png" width="45" height="45" alt="" data-container="body" data-toggle="popover" data-placement="top" data-content="Voting Privilege"></div><div class="vs222"><span class="vs222-1">30%</span><img src="/public/game/items/tank.png" width="45" height="45" alt="" data-container="body" data-toggle="popover" data-placement="top" data-content="+30 Tank Q5"></div><div class="vs222"><span class="vs222-1">40%</span><img src="/public/game/items/energy-bar.png" width="45" height="45" alt="" data-container="body" data-toggle="popover" data-placement="top" data-content="+5 Energy Q5"></div><div class="vs222"><span class="vs222-1">50%</span><img src="/public/game/items/rpg.png" width="45" height="45" alt="" data-container="body" data-toggle="popover" data-placement="top" data-content="+10 RPG Q5"></div><div class="vs222"><span class="vs222-1">60%</span><img src="/public/game/missions/reward.png" width="45" height="45" alt=""></div><div class="vs222"><span class="vs222-1">70%</span><img src="/public/game/missions/reward.png" width="45" height="45" alt=""></div><div class="vs222"><span class="vs222-1">80%</span><img src="/public/game/missions/reward.png" width="45" height="45" alt=""></div><div class="vs222"><span class="vs222-1">90%</span><img src="/public/game/missions/reward.png" width="45" height="45" alt=""></div><div class="vs222"><span class="vs222-1">100%</span><img src="/public/game/missions/reward.png" width="45" height="45" alt=""></div></div><div id="challengeR" style="display:none;"><p class="vs219">Top Damage</p><table width="100%" height="30" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:10px;"><tr class="vs223"><td class="text-right" width="20"><span class="vs223-2">1</span></td><td class="text-center" width="60" height="45"><div class="vs223-5 vs223-5-1"><img class="vs223-3" src="/public/upload/citizen/230.jpg" width="40" height="40" alt="" /></div></td><td class="text-left"><a class="vs223-2" href="https://www.erevollution.com/en/profile/230">Miltiados</a></td><td class="text-center" width="180"><span class="vs223-4">6,000,579,749</span></td></tr><tr class="vs223"><td class="text-right" width="20"><span class="vs223-2">2</span></td><td class="text-center" width="60" height="45"><div class="vs223-5 vs223-5-2"><img class="vs223-3" src="/public/upload/citizen/19970.jpg" width="40" height="40" alt="" /></div></td><td class="text-left"><a class="vs223-2" href="https://www.erevollution.com/en/profile/19970">itso</a></td><td class="text-center" width="180"><span class="vs223-4">1,563,178,019</span></td></tr><tr class="vs223"><td class="text-right" width="20"><span class="vs223-2">3</span></td><td class="text-center" width="60" height="45"><div class="vs223-5 vs223-5-3"><img class="vs223-3" src="/public/upload/citizen/5906.jpg" width="40" height="40" alt="" /></div></td><td class="text-left"><a class="vs223-2" href="https://www.erevollution.com/en/profile/5906">w1zL</a></td><td class="text-center" width="180"><span class="vs223-4">1,360,830,002</span></td></tr><tr class="vs223"><td class="text-right" width="20"><span class="vs223-2">4</span></td><td class="text-center" width="60" height="45"><div class="vs223-5 vs223-5-4"><img class="vs223-3" src="/public/upload/citizen/3526.jpg" width="40" height="40" alt="" /></div></td><td class="text-left"><a class="vs223-2" href="https://www.erevollution.com/en/profile/3526">Galaico</a></td><td class="text-center" width="180"><span class="vs223-4">1,351,465,076</span></td></tr><tr class="vs223"><td class="text-right" width="20"><span class="vs223-2">5</span></td><td class="text-center" width="60" height="45"><div class="vs223-5 vs223-5-5"><img class="vs223-3" src="/public/upload/citizen/9664.jpg" width="40" height="40" alt="" /></div></td><td class="text-left"><a class="vs223-2" href="https://www.erevollution.com/en/profile/9664">Deadly</a></td><td class="text-center" width="180"><span class="vs223-4">1,083,685,028</span></td></tr></table></div>                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+    if(jQuery('[data-toggle="popover"]').length) {
+        jQuery('[data-toggle="popover"]').popover({ trigger: "hover" });
+    }
+});
+
+function challengeShow() {
+    var obiekt1 = document.getElementById("challengeM");
+    if(obiekt1.style.display == 'block') {
+        document.getElementById("challengeM").style.display = 'none';
+        document.getElementById("challengeR").style.display = 'block';
+    } else {
+        document.getElementById("challengeM").style.display = 'block';
+        document.getElementById("challengeR").style.display = 'none';
+    }
+}
+</script>                                    <a class="vs167" href="javascript:;" data-toggle="modal" data-target="#exampleModal_8"><img src="/public/game/missions/quest.png" width="45" height="45" alt=""></a>                                    <div class="modal fade" id="exampleModal_8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;">
+                                        <div class="modal-dialog" style="margin-top: 65px;">
+                                        <div class="modal-content vs168">
+                                            <div class="modal-header" style="border: none;">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="vs168-1" aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title vs168-1" id="exampleModalLabel">Mission 8: Professional Society Builder</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="vs168-2">
+                                                    <p class="vs168-4">Invite 5 more friends with your referral link and help them reach level 20 and build your country society.</p>
+                                                    <span class="vs168-3">0 / 5</span>
+                                                    <p>Reward</p>
+                                                    <span class="label label-success label-large vs168-5"><img src="/public/game/icons/gold-icon-s.png" width="24" height="24" alt=""> +30 Gold</span><span class="label label-success label-large vs168-5"><img src="/public/game/items/energy-bar.png" width="24" height="24" alt=""> +20 Energy Q5</span> 
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer vs168-6" style="border: none;">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                                                        <script type="text/javascript">
+                                    jQuery(document).ready(function(){
+                                    jQuery(".myQuests").click(function() {
+                                        var quest_id = jQuery(this).attr("id").split("_");
+                                        jQuery.ajax({
+                                            url : "https://www.erevollution.com/en/missions/"+quest_id[1]+"",
+                                            type: "POST",
+                                            data: jQuery("#loadEnergy").serialize(),
+                                            success: function(data){
+                                                if(data){
+                                                    jQuery.each(jQuery.parseJSON(data), function(idx, obj) {
+                                                        if(obj.STATUS==1){
+                                                            //location.reload();
+                                                            location.assign(window.location); 
+                                                        }
+                                                    });
+                                                }
+                                            }
+                                        });
+                                        return false;
+                                    });
+                                    });
+                                    </script>
+                                </li>
+                                				<li class="nav-header hidden-sm hidden-xs" style="clear: both;border:0px;padding:10px 0 5px 0;">
+<center>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Ad4 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:200px"
+     data-ad-client="ca-pub-4352859113971077"
+     data-ad-slot="9838809744"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+				</li>
+                            </ul>
+			</div>
+                    </div> 
+		</section>
+                                
+                		<div id="nav-col-submenu"></div>
+                                
+            </div>
+            <div id="content-wrapper"><div class="row"><div class="col-lg-12"><div class="main-box clearfix" style="min-height: 1200px;">
+<div class="vs323-1">
+
+
+<header class="clearfix">&nbsp;</header><a id="loadWeeklyEvents" href="javascript:;" data-toggle="modal" data-target="#exampleModal_Events"><img src="/public/game/events/everydaychores/weekly-events.png" /></a>
+<link rel="stylesheet" type="text/css" href="/public/game/events/everydaychores/events.css" />
+
+<div id="exampleModal_Events" class="modal fade evs000">
+    <div class="modal-dialog evs001">
+        <div class="modal-content evs002">
+            <div class="evs003">
+                <div class="evs004" style="display: none;">Everyday Chores</div>
+                <div class="evs005" data-dismiss="modal"></div>
+                <div id="loadStage" class="">
+                    <div id="eLog" class="evs209" style="display: none;"></div>
+                    <audio class="weeklyAudio1"><source src="/public/game/events/everydaychores/success.mp3" /></audio>
+                    <div id="eField"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input id="loadEvents" name="loadEvents" value="1" type="hidden">
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+setInterval(function(){ 
+    if(jQuery('[data-toggle="popover"]').length) {
+        jQuery('[data-toggle="popover"]').popover({ trigger: "hover" });
+    }
+}, 1000);
+
+var eEvents = jQuery(window).width();
+if(eEvents<835){
+    jQuery(".evs001").css("width", ""+eEvents+"px");
+    jQuery(".evs001").css("overflow-x", "scroll");
+}
+
+});
+
+jQuery(document).on('mouseout', ':not(.popover)', function(){
+    jQuery('.popover').popover('hide');
+});
+
+function loadEvents() {
+    jQuery.ajax({
+        url : "https://www.erevollution.com/en/events-update/1/0",
+        type: "POST",
+        data: jQuery("#loadEvents").serialize(),
+        success: function(data){
+            if(data){
+                jQuery.each(jQuery.parseJSON(data), function(idx, obj) {
+                    if(obj.STATUS==1){
+                        jQuery("#eField").empty();
+                        jQuery("#eField").append(""+ obj.LOG +"");
+                    }
+                });
+            }
+        }
+    });
+    return false;
+}
+
+var myLuck;
+function logEvents(eLog) {
+    jQuery('.weeklyAudio1').prop("volume", 1.0);
+    jQuery('.weeklyAudio1').attr({'autoplay':'autoplay'});
+    jQuery('.weeklyAudio1').trigger("play");
+    jQuery("#eLog").css("display", "block");
+    jQuery("#eLog").empty();
+    jQuery("#eLog").append(""+ eLog +"");
+    myLuck = setInterval(function(){myLuckCD()}, 5000);
+}
+function myLuckCD() {
+    jQuery("#eLog").css("display", "none");
+    clearInterval(myLuck);
+    loadEvents();
+}
+
+jQuery(document).on("click", '#eOpen', function() {
+    var id = jQuery(this).attr("data-id");
+    id = parseInt(id);
+    jQuery.ajax({
+        url : "https://www.erevollution.com/en/events-update/2/"+id+"",
+        type: "POST",
+        data: jQuery("#loadEvents").serialize(),
+        success: function(data){
+            if(data){
+                jQuery.each(jQuery.parseJSON(data), function(idx, obj) {
+                    if(obj.STATUS==1){
+                        logEvents(obj.Log);
+                    }
+                });
+            }
+        }
+    });
+    return false;
+});
+
+var eFirst = 0;
+jQuery(document).on("click", '#loadWeeklyEvents', function() {
+    if(eFirst==0){
+        loadEvents();
+        eFirst = 1;
+    }
+    return false;
+});
+</script>
+
+
+
+<header class="clearfix"><h2 class="vs169">Daily order</h2></header><div class="vs170-10"><strong class="vs170-12">Fight for South Korea in Chungcheongbuk-do</strong><big class="vs170-11">0/50</big><a class="btn btn-primary btn-sm vs170-4" href="https://www.erevollution.com/en/battlefield/9775/1"><span class="vs170-3">Battlefield</span></a><a class="btn btn-default btn-sm vs170-6" href="javascript:;"><span class="vs170-7">Get reward</span></a></div>
+<header class="clearfix"><h2 class="vs169">Wars</h2></header><div class="vs151-1 vs170-13"><div class="vs151-3" style="width:60px;"><img class="vs151-4" src="/public/game/flags/shiny/32/Portugal.png" alt="" title="Portugal" /></div><div class="vs151-7-0" style="margin-left: 5px;margin-right: 5px;"></div><div class="vs151-8" style="width:60px;"><img class="vs151-4 vs151-9" src="/public/game/flags/shiny/32/South-Korea.png" alt="" title="South Korea" style="margin-right: 0px;" /></div><a class="vs151-11" href="https://www.erevollution.com/en/country/region/63/South-Korea/435/Chungcheongbuk-do"><span class="" style="line-height: 30px;font-weight: 100;">Chungche...</span></a><a class="btn btn-primary btn-sm" style="float:right;margin-right:10px;" href="https://www.erevollution.com/en/battlefield/9775/1">Fight</a></div><div class="vs151-1 vs170-13"><div class="vs151-3" style="width:60px;"><img class="vs151-4" src="/public/game/flags/shiny/32/Bulgaria.png" alt="" title="Bulgaria" /></div><div class="vs151-7-1" style="margin-left: 5px;margin-right: 5px;"></div><div class="vs151-8" style="width:60px;"><img class="vs151-4 vs151-9" src="/public/game/flags/shiny/32/Ukraine.png" alt="" title="Ukraine" style="margin-right: 0px;" /></div><a class="vs151-11" href="https://www.erevollution.com/en/country/region/69/Ukraine/568/Bassarabia"><span class="" style="line-height: 30px;font-weight: 100;">Bassarab...</span></a><a class="btn btn-primary btn-sm" style="float:right;margin-right:10px;" href="https://www.erevollution.com/en/battlefield/9776/1">Fight</a></div><div class="vs151-1 vs170-13"><div class="vs151-3" style="width:60px;"><img class="vs151-4" src="/public/game/flags/shiny/32/United-Arab-Emirates.png" alt="" title="United Arab Emirates" /><img class="vs151-5 " src="/public/game/battle/small_resistance.png" alt="" /></div><div class="vs151-7-0" style="margin-left: 5px;margin-right: 5px;"></div><div class="vs151-8" style="width:60px;"><img class="vs151-4 vs151-9" src="/public/game/flags/shiny/32/Turkey.png" alt="" title="Turkey" style="margin-right: 0px;" /></div><a class="vs151-11" href="https://www.erevollution.com/en/country/region/68/Turkey/490/Dubai"><span class="" style="line-height: 30px;font-weight: 100;">Dubai</span></a><a class="btn btn-primary btn-sm" style="float:right;margin-right:10px;" href="https://www.erevollution.com/en/war/show/4367">Fight</a></div><a href="https://www.erevollution.com/en/wars">Wars</a><a href="https://www.erevollution.com/en/news/68/3/0/1" style="margin-left:15px;">Latest events</a>
+<header class="clearfix"><h2 class="vs169">Top news</h2></header><div class="tabs-wrapper" style="width: 333px;"><ul class="nav nav-tabs" style="margin-bottom: 1px;"><li class="active"><a href="#tab-home" data-toggle="tab">International</a></li><li class=""><a href="#tab-national" data-toggle="tab"><img src="/public/game/flags/shiny/24/Slovenia.png" alt="" title="Slovenia" /> SI</a></li></ul><div class="tab-content" style="margin: 0px;padding: 0px;"><div class="tab-pane fade active in" id="tab-home"><ul class="widget-products"><li style="border-radius: 20px;"><a class="vs171-11" href="https://www.erevollution.com/en/article/25131"><span class="img vs191"><strong class="vs171-4 vs171-13">219</strong><small class="vs171-5 vs171-14">votes</small></span><span class="product clearfix vs171-10"><span class="name vs171-15">[Statement] The end for me ...</span><span class="price vs171-12"><i class="fa fa-user"></i> Miltiados - <i class="fa fa-comment"></i> 115 - <i class="fa fa-clock-o"></i> 17 hours ago</span></span></a></li><li style="border-radius: 20px;"><a class="vs171-11" href="https://www.erevollution.com/en/article/25111"><span class="img vs191"><strong class="vs171-4 vs171-13">124</strong><small class="vs171-5 vs171-14">votes</small></span><span class="product clearfix vs171-10"><span class="name vs171-15">【Brazil】REAL PHOTOS!!! - HUE FRIENDS!!! MORE 3 FRIENDS NOW!!</span><span class="price vs171-12"><i class="fa fa-user"></i> KRATTOS - <i class="fa fa-comment"></i> 83 - <i class="fa fa-clock-o"></i> 2 days ago</span></span></a></li><li style="border-radius: 20px;"><a class="vs171-11" href="https://www.erevollution.com/en/article/25093"><span class="img vs191"><strong class="vs171-4 vs171-13">77</strong><small class="vs171-5 vs171-14">votes</small></span><span class="product clearfix vs171-10"><span class="name vs171-15">[Délos] The Light of Hope</span><span class="price vs171-12"><i class="fa fa-user"></i> Kaann - <i class="fa fa-comment"></i> 33 - <i class="fa fa-clock-o"></i> 2 days ago</span></span></a></li><li style="border-radius: 20px;"><a class="vs171-11" href="https://www.erevollution.com/en/article/25098"><span class="img vs191"><strong class="vs171-4 vs171-13">72</strong><small class="vs171-5 vs171-14">votes</small></span><span class="product clearfix vs171-10"><span class="name vs171-15">BiH just avoid getting deleted</span><span class="price vs171-12"><i class="fa fa-user"></i> LL B L A C... - <i class="fa fa-comment"></i> 44 - <i class="fa fa-clock-o"></i> 2 days ago</span></span></a></li><li style="border-radius: 20px;"><a class="vs171-11" href="https://www.erevollution.com/en/article/25126"><span class="img vs191"><strong class="vs171-4 vs171-13">34</strong><small class="vs171-5 vs171-14">votes</small></span><span class="product clearfix vs171-10"><span class="name vs171-15">f@ck!</span><span class="price vs171-12"><i class="fa fa-user"></i> Sorrosinze... - <i class="fa fa-comment"></i> 18 - <i class="fa fa-clock-o"></i> 20 hours ago</span></span></a></li></ul><center><a href="https://www.erevollution.com/en/news/0/1/0/1">more news</a></center></div><div class="tab-pane fade" id="tab-national"><ul class="widget-products"></ul><center><a href="https://www.erevollution.com/en/news/61/1/0/1">more news</a></center></div></div></div>
+</div>
+<div class="vs323-2">
+
+<header class="clearfix"><h2 class="vs169">My Chat</h2></header>
+<div class="conversation-wrapper vs173">
+    <ul class="nav nav-tabs vs173-3">
+        <li class="active"><a class="vs173-2" showtab="" data-target="#tab-feeds1" data-toggle="tab">All</a></li>
+        <li class=""><a class="vs173-2" showtab="" data-target="#tab-feeds4" data-toggle="tab" style="padding: 6px 15px 5px;height: 35px;"><img src="/public/game/flags/shiny/24/Slovenia.png" alt="" title="Slovenia" /></a></li>
+        <li class=""><a class="vs173-2" showtab="" data-target="#tab-feeds2" data-toggle="tab">My Party</a></li>
+        <li class=""><a class="vs173-2" showtab="" data-target="#tab-feeds3" data-toggle="tab">My Military Unit</a></li>
+    </ul>
+    <div class="conversation-content vs173-1">   
+        <div class="slimScrollDiv" style="position: relative;width: auto;height: 900px;overflow-y: scroll;padding-right: 3px;">
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="tab-feeds1">
+                    <form id="chatForm1" enctype="multipart/form-data" method="post"><input id="chatFeeds1" class="form-control" name="chatFeeds1" placeholder="Say something..." type="text"></form>
+                    <div id="chatDiv1"></div>
+                </div>
+                <div class="tab-pane fade" id="tab-feeds2">
+                    <form id="chatForm2" enctype="multipart/form-data" method="post"><input id="chatFeeds2" class="form-control" name="chatFeeds2" placeholder="Say something..." type="text"></form>
+                    <div id="chatDiv2"></div>
+                </div>
+                <div class="tab-pane fade" id="tab-feeds3">
+                    <form id="chatForm3" enctype="multipart/form-data" method="post"><input id="chatFeeds3" class="form-control" name="chatFeeds3" placeholder="Say something..." type="text"></form>
+                    <div id="chatDiv3"></div>
+                </div>
+                <div class="tab-pane fade" id="tab-feeds4">
+                    <form id="chatForm4" enctype="multipart/form-data" method="post"><input id="chatFeeds4" class="form-control" name="chatFeeds4" placeholder="Say something..." type="text"></form>
+                    <div id="chatDiv4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+var uSpam = [];
+
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {
+    createCookie(name,"",-1);
+}
+
+var x = readCookie('uSpam');
+if(x) {
+    str = x.split(",");
+    uSpam = str.map(function (x) { 
+        return parseInt(x); 
+    });
+}
+
+jQuery(document).on("click", '.uSpam', function() {
+    var uUser = $(this).attr('data-value');
+    uUser = parseInt(uUser);
+    if(jQuery.inArray(uUser, uSpam) !== -1) {
+        uSpam.splice(jQuery.inArray(uUser, uSpam), 1);
+    }else{
+        uSpam.push(uUser);
+    }
+    $.unique(uSpam.sort());
+    var str = uSpam.join(",");
+    createCookie('uSpam', str, 30);
+    loadChat();
+});
+
+loadChat();
+
+function replaceLinks(text) {
+    //var str = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    var str = /(https?):\/\/(www.erevollution.com)\/([-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    return text.replace(str,"<a href='$1://$2/$3'>$2/$3</a>"); 
+}
+
+function updateChat(data) {
+    jQuery("#chatDiv1").empty();
+    jQuery("#chatDiv2").empty();
+    jQuery("#chatDiv3").empty();
+    jQuery("#chatDiv4").empty();
+    jQuery.each(jQuery.parseJSON(data), function(idx, obj) {        
+        var outStr = obj.DATE.substring(8, 10)+"."+obj.DATE.substring(5, 7)+" "+obj.DATE.substring(11, 16);
+        obj.TEXT = replaceLinks(obj.TEXT);
+        if(jQuery.inArray(parseInt(obj.USER), uSpam) !== -1) {
+            obj.TEXT = ".....";
+        }
+        jQuery("#chatDiv"+obj.TYPE).append(jQuery("<div class=\"conversation-item item-left clearfix\"><div class=\"conversation-user\"><img src=\"/public//upload/citizen/"+ obj.AVATAR +".jpg\" width=\"50\" height=\"50\" alt=\"\"></div><div class=\"conversation-body\"><div class=\"name\"><a style=\"color: #4B6228;\" href=\"https://www.erevollution.com/en/profile/"+ obj.USER +"\">"+ obj.NAME +"</a></div><div class=\"time\"> "+ outStr +" <a class=\"uSpam\" href=\"javascript:;\" data-value=\""+obj.USER+"\"><i class=\"fa fa-ban\"></i></a></div><div class=\"text\">"+ obj.TEXT.replace(/\\/g, "") +"</div></div></div>"));
+    });
+}
+
+function loadChat() {
+    jQuery.ajax({
+        url : "https://www.erevollution.com/en/chat/1",
+        type: "POST",
+        data: jQuery("#chatForm1").serialize(),
+        success: function(data){
+            if(data){
+                updateChat(data);
+            }
+        }
+    });
+    return false;  
+}
+
+function sendChat(x) {
+    jQuery.ajax({
+        url : "https://www.erevollution.com/en/chat/2",
+        type: "POST",
+        data: jQuery("#chatForm"+x).serialize(),
+        async: false,
+        success: function(data){
+            if(data){
+                jQuery.each(jQuery.parseJSON(data), function(idx, obj) {
+                    if(obj.STATUS>0){
+                        jQuery("#chatFeeds"+x).val("");
+                        loadChat();
+                    }
+                    if(obj.CD>0){
+                        jQuery("#chatDiv"+obj.CD).prepend(jQuery("<div class=\"conversation-item item-left clearfix\"><div class=\"conversation-body\"><div class=\"text\">"+ obj.CDMSG +"</div></div></div>"));
+                    }
+                    if(obj.SPAM>0){
+                        jQuery("#chatDiv"+obj.SPAM).prepend(jQuery("<div class=\"conversation-item item-left clearfix\"><div class=\"conversation-body\"><div class=\"text\">"+ obj.CDMSG +"</div></div></div>"));
+                    }
+                });
+            }
+        }
+    });
+    return false;  
+}
+
+jQuery('#chatFeeds1').keypress(function(e){
+    if(e.which == 13){
+        sendChat(1);
+        return false;
+    }
+});
+jQuery('#chatFeeds2').keypress(function(e){
+    if(e.which == 13){
+        sendChat(2);
+        return false;
+    }
+});
+jQuery('#chatFeeds3').keypress(function(e){
+    if(e.which == 13){
+        sendChat(3);
+        return false;
+    }
+});
+jQuery('#chatFeeds4').keypress(function(e){
+    if(e.which == 13){
+        sendChat(4);
+        return false;
+    }
+});
+
+});
+</script> 
+
+</div>
+<div class="clearfix"></div><br>
+
+</div></div></div>
+<footer id="footer-bar" class="row" style="height: auto;line-height: 24px;">           
+    <p id="footer-copyright" class="col-xs-12">
+        <a href="http://blog.erevgame.com/" target="_blank">Blog</a> &nbsp; | &nbsp;
+        <a href="http://forum.erevgame.com/index.php?action=forum" target="_blank">Forum</a> &nbsp; | &nbsp;
+        <a href="http://support.erevgame.com/" target="_blank">Support</a> &nbsp; | &nbsp;
+        <a href="http://wiki.erevgame.com/index.php?title=Main_Page" target="_blank">Wiki</a> &nbsp; | &nbsp;
+        <a href="https://www.erevollution.com/en/latest-updates">Latest Updates</a> &nbsp; | &nbsp;
+        <a href="https://www.erevollution.com/en/rules">Rules</a> &nbsp; | &nbsp;
+        <a href="https://www.erevollution.com/en/privacy-policy">Privacy</a> &nbsp; | &nbsp;
+        <a href="mailto:erevollutiongame@gmail.com">Contact</a>
+    </p>
+    <p id="footer-copyright" class="col-xs-12">
+        Follow us: &nbsp;
+        <a href="https://www.facebook.com/eRevollution" target="_blank"><img src="/public/img/facebook_icon.png" alt=""> Facebook</a> &nbsp;
+        <a href="https://twitter.com/eRevgame" target="_blank"><img src="/public/img/twitter_icon.png" alt=""> Twitter</a> &nbsp;
+        <a href="https://www.youtube.com/channel/UCn_fOhTEJs2fzHLFRA8TAXg" target="_blank"><img src="/public/img/youtube_icon.png" alt=""> Youtube</a> &nbsp;
+    </p>
+    <p id="footer-copyright" class="col-xs-12">Copyright © 2016-2017&nbsp;eRevollution</p>
+</footer>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/public/js/bootstrap.js"></script>
+<script src="/public/js/app.js"></script>
+<script>
+$(document).ready(function() {
+    gameHotkeys('https://www.erevollution.com/en', '74981');
+});
+</script>
+
+</body>
+</html>
