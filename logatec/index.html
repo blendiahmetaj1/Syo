@@ -29,15 +29,17 @@
 			<li><a href="#">Page 3</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-		<div class="container" style="max-width: 110px; padding-top:7px;">
+		<div class="container" style="max-width: 150px; padding-top:7px;">
 		<button id="date" type="button" class="btn btn-primary"></button>
 		</div>
 		<script language="javascript">
 		n =  new Date();
 		y = n.getFullYear();
-		m = n.getMonth()+1;
+		m = n.getMonth() + 1;
 		d = n.getDate();
-		document.getElementById("date").innerHTML = d + "." + m + "." + y;
+		h = n.getHours();
+		min = n.getMinutes();
+		document.getElementById("date").innerHTML = d + "." + m + "." + y + " " + h + ":" + min;
 		</script>
 		</ul>
 	</div>
