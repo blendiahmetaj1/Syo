@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logatec</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Tomaž Èuk">
+	<meta name="description" content="Spletna o stran o Logatcu.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"
+	<meta name="keywords" content="logatec, mesto, opis">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+<div style="position:absolute;z-index:0;left:0;top:0;width:100%;height:100%">
+  <img src="logatec.jpg" style="width:100%;height:100%" alt="[]" />
+</div>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a href="#" class="navbar-left"><img src="logo.png" style="max-height:40px; margin-top: 5px; margin-right:10px; margin-left: 5px;"></a>
+			<a class="navbar-brand" href="#">Logatec</a>
+		</div>
+		<ul class="nav navbar-nav" >
+			<li class="active"><a href="index.html">Domov</a></li>
+			<li><a href="#">Page 1</a></li>
+			<li><a href="#">Page 2</a></li>
+			<li><a href="#">Page 3</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		<div class="container" style="max-width: 110px; padding-top:7px;">
+		<button id="date" type="button" class="btn btn-primary"></button>
+		</div>
+		<script language="javascript">
+		n =  new Date();
+		y = n.getFullYear();
+		m = n.getMonth()+1;
+		d = n.getDate();
+		document.getElementById("date").innerHTML = d + "." + m + "." + y;
+		</script>
+		</ul>
+	</div>
+</nav>
+
+<div class="col-lg-12">
+<div style="padding-left:7%; padding-top: 2%; padding-right: 7%">
+	<div class="well" style="background-color: rgba(255, 255, 255, 0.8)">
+		<p>Lalalal</p>
+	</div>
+</div>
+</div>
+</body>
+</html>
